@@ -1,0 +1,34 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Nav list styles section*/
+
+.navUl{
+    /* variable */
+    --text-color: red;
+    --backgroundColor-list: rgba(29, 27, 27, 0.274);
+    --fontSize: 1.4rem; 
+    /*  */
+    height: fit-content;
+    width: 95vw;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+    gap: 3rem;
+}
+.navList{
+    padding: 1.5rem;
+    font-size: var(--fontSize);
+}
+
+.navList:hover{
+    background-color: var(--backgroundColor-list);
+}
+
+
