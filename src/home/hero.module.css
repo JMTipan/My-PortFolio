@@ -9,11 +9,24 @@
     align-items: center;
     justify-content: center;
     
+
 }
 
+/* from top animations */
+.heroFlexContainer p{
+    animation: showAnimation 0.5s;
+}
+.heroFlexContainer h1{
+    animation: showAnimation 1.4s;
+    animation-timing-function: cubic-bezier(0.04,-0.24, 0, 0.99);
+
+}
+
+/*  */
+
+/* hero style section */
 .hero{
-   
-    border-left: 0.4rem solid;
+
     width: 40vw;
     padding: 10px;
     font-size: 1.5rem;
@@ -22,8 +35,10 @@
 
 .hero h1{
     text-decoration: underline 2px;
-    
+
 }
+
+/*  */
 
 
 /* phone size */
@@ -31,5 +46,21 @@
 @media (max-width: 700px) {
     .hero{
         font-size: 1.2rem;
+    }
+}
+
+
+/* rendered animation */
+
+@keyframes showAnimation {
+    from{
+        transform: translateY(-100vh);
+
+    }
+}
+
+@keyframes showAnimation-header {
+    from{
+        transform: translateY(-100vh);
     }
 }
