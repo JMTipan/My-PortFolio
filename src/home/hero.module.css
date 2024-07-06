@@ -1,23 +1,27 @@
 
-
+/* hero container */
 .heroFlexContainer{
     --text-color: black; 
     /*  */
     height: 90vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
-
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
+
+/* profile section */
+.imgProfile{
+    animation: showAnimation 0.5s;
+}   
+
 
 /* from top animations */
 .heroFlexContainer p{
     animation: showAnimation 0.5s;
 }
 .heroFlexContainer h1{
-    animation: showAnimation 1.4s;
+    animation: showAnimation 1.1s;
     animation-timing-function: cubic-bezier(0.04,-0.24, 0, 0.99);
 
 }

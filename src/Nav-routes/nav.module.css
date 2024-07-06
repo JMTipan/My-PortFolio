@@ -3,7 +3,12 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+body{
+    overflow: hidden;
+}
+/* this menu is hidden if != phone screen */
 
 
 /* Nav list styles section*/
@@ -12,19 +17,23 @@
     /* variable */
     --text-color: red;
     --backgroundColor-list: rgba(29, 27, 27, 0.274);
-    --fontSize: 1.4rem; 
+    --fontSize: 1.3rem; 
     /*  */
     height: fit-content;
-    width: 95vw;
+    width: 100vw;
     display: flex;
     justify-content: end;
     align-items: center;
     list-style: none;
-    gap: 3rem;
+    gap: 3vw;
 }
 .navList{
-    padding: 1.5rem;
+    padding: 1.2rem;
     font-size: var(--fontSize);
+    
+}
+.navList a {
+    color: black;
 }
 
 .navList:hover{
@@ -32,3 +41,37 @@
 }
 
 
+/* phone screen size */
+
+.navMoveSide{
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 500px) {
+    .navUl{
+        display: block;
+        width: fit-content;
+        position: relative;
+    }
+    .navList{
+        background-color: transparent;
+        transition: 0.4s;
+        display: block;
+        position: relative;
+    }
+    .navUl > li:nth-child(1){
+        background-color: rgba(128, 128, 128, 0.315);
+        z-index: 1;
+    }
+    .navUl li:nth-child(2){
+        left: 130px;
+    }
+    .navUl li:nth-child(3){
+        left: 130px;
+    }
+    .navUl:hover > li{
+        left: 0;
+    }
+
+}
