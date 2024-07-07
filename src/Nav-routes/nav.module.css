@@ -5,9 +5,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    overflow: hidden;
-}
+
 /* this menu is hidden if != phone screen */
 
 
@@ -16,7 +14,7 @@ body{
 .navUl{
     /* variable */
     --text-color: red;
-    --backgroundColor-list: rgba(29, 27, 27, 0.274);
+    --backgroundColor-list: #E3E0F3;
     --fontSize: 1.3rem; 
     /*  */
     height: fit-content;
@@ -27,14 +25,15 @@ body{
     list-style: none;
     gap: 3vw;
 }
+
 .navList{
     padding: 1.2rem;
+    margin-right: 1vw;
     font-size: var(--fontSize);
+    transition: 0.4s;
     
 }
-.navList a {
-    color: black;
-}
+
 
 .navList:hover{
     background-color: var(--backgroundColor-list);
@@ -48,30 +47,57 @@ body{
     right: 0;
 }
 
-@media (max-width: 500px) {
+
+
+@media (max-width: 800px) {
+    .burgerStyle{
+        display: flex;
+        position: relative;
+        left: 4vw;
+        margin: 2vw;
+        justify-content: center;
+        gap: 5px;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        background-color: gray;
+        border-radius: 50%;
+        rotate: 90deg;
+        transition: 0.4s;
+    }
+    .burgerStyle div{
+        height: 30px;
+        width: 5px;
+        background-color: black;
+        border-radius: 5px;
+        
+    }
+    /* remove the flex */
     .navUl{
         display: block;
         width: fit-content;
         position: relative;
+        overflow-x: hidden;
     }
     .navList{
-        background-color: transparent;
-        transition: 0.4s;
-        display: block;
         position: relative;
     }
-    .navUl > li:nth-child(1){
-        background-color: rgba(128, 128, 128, 0.315);
+    .navUl > :nth-child(1){
         z-index: 1;
     }
-    .navUl li:nth-child(2){
-        left: 130px;
+    .navUl > li:nth-child(2){
+        left: 140px;
     }
-    .navUl li:nth-child(3){
-        left: 130px;
+    .navUl > li:nth-child(3){
+        left: 160px;
     }
-    .navUl:hover > li{
+    .navUl > li:nth-child(4){
+        left: 180px;
+    }
+    .navUl:hover li{
         left: 0;
     }
-
+    .navUl:hover > :nth-child(1){
+        rotate: 360deg;
+    }
 }

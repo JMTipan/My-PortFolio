@@ -1,5 +1,8 @@
 import style from './hero.module.css'
-
+import javascritp_logo from "../assets/Javascript.png"
+import html_logo from "../assets/Html.webp"
+import css_logo from "../assets/Css.png"
+import react_logo from '../assets/React.png'
 
 function Hero(props){
 
@@ -8,11 +11,22 @@ function Hero(props){
         <>
         <div className={style.heroFlexContainer}>
             <div className={style.hero}>
-                <h1>Hi, Im Joshua</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt pariatur dolor minima eveniet eaq</p>
+                <h1>Hi, Im Joshua im a front end developer</h1>
+                <p>i still dont kow what to put here :)</p>
+                <div className={style.techStackContainer}>
+                    <h1>Tech Stack</h1>
+                    <div className={style.techLayout}>
+                        <img src={javascritp_logo} alt="javascript" width={40}/>
+                        <img src={html_logo} alt="html" width={40}/>
+                        <img src={css_logo} alt="css" width={40}/>
+                        <img src={react_logo} alt="React" width={40}/>
+                    </div>
+                </div>
+                
             </div>
-            <img className={style.imgProfile} src="" alt="" height={200} width={200}/>
+            <img className={style.heroProfile} src="" alt="" height={400} width={400}/>
         </div>
+     
         </>
     );
 }
