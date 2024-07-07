@@ -14,7 +14,7 @@ function Hero(props){
                 <h1>Hi, Im Joshua im a front end developer</h1>
                 <p>i still dont kow what to put here :)</p>
                 <div className={style.techStackContainer}>
-                    <h1>Tech Stack</h1>
+                    <h3>Tech Stack</h3>
                     <div className={style.techLayout}>
                         <img src={javascritp_logo} alt="javascript" width={40}/>
                         <img src={html_logo} alt="html" width={40}/>
@@ -25,6 +25,7 @@ function Hero(props){
                 
             </div>
             <img className={style.heroProfile} src="" alt="" height={400} width={400}/>
+            <div className='blob'></div>
         </div>
      
         </>
